@@ -1,2 +1,9 @@
-<h1>Movies#index</h1>
-<p>Find me in app/views/movies/index.html.erb</p>
+<h1>Top 100 movies of all times.</h1>
+<ol>
+  <% @movies.each do |m|%>
+    <li>
+      <%= link_to m.title, m %> was produced by
+      <%= link_to m.production_company.name, m.production_company.name%>
+    </li>
+  <%end%>
+</ol>
