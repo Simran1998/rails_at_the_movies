@@ -8,9 +8,15 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css">
   </head>
 
   <body>
+  <section>
+    <div class="container">
+      <h2 class="title is-2">Top Movies from IMDB</h2>
+    </div>
     <%= yield %>
+    </section>
   </body>
 </html>
