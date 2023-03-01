@@ -1,9 +1,4 @@
 <h2 class="title is-2 has-background-link-dark has-text-white p-2 mt-3 pl-5">Top 100 movies of all times.</h2>
-<ol class="ml-6">
-  <% @movies.each do |m|%>
-    <li>
-      <%= link_to m.title, m %> was produced by
-      <%= link_to m.production_company.name, m.production_company.name%>
-    </li>
-  <%end%>
-</ol>
+<%= render @movies%>
+
+<h6 class="title is-6 p-4"><%= link_to 'Home', root_path%></h6>

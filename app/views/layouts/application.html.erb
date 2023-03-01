@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsAtTheMovies</title>
+    <title><%= yield(:html_title) + "-" if content_for?(:html_title)%>Top 100 movies</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -18,5 +18,10 @@
     </div>
     <%= yield %>
     </section>
+   <% if controller_name == 'home'%>
+   <p>There is no place like home</p>
+    <% else%>
+    <%= render partial:'shared/footer'%>
+     <% end %>
   </body>
 </html>
